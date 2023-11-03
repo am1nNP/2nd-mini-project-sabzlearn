@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #080710;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+
+
+.box{
+position: relative;
+width: 480px;
+height: auto;
+padding: 50px 35px 35px 35px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+
+.blur::before{
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(255, 255, 255, 0.13);
+backdrop-filter: blur(5px);
+z-index: -1;
+border: 2px solid rgba(255, 255, 255, 0.13);
+border-radius: 10px;
+filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.5));
+}
+
+.box::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    background: linear-gradient(-25deg, hsla(275, 77%, 19%, 1) 0%, hsla(305, 48%, 62%, 1) 43%, hsla(351, 89%, 86%, 1) 100%);
+    transform: translate(-40%,-50%);
+    z-index: -2;
+    }
+
+.box::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    background: linear-gradient(125deg, hsla(240, 77%, 19%, 1) 0%, hsla(246, 48%, 62%, 1) 43%, hsla(177, 89%, 86%, 1) 100%);
+    transform: translate(20%,60%);
+    z-index: -2;
+    }
+
+
+.form-title{
+color: #fff;
+font-size: 2rem;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.input-lable{
+    font-size: 1rem;
+    color: #fff;
+}
+.username,.password{
+font-size: 14px;
+background-color: rgba(255, 255, 255, 0.03);
+padding:10px;
+height: 50px;
+font-weight: 300;
+outline: none;
+border: none;
+color: #fff;
+}
+
+.btn-submit{
+font-size: 18px;
+padding: 15px;
+width: 100%;
+margin-top: 2rem;
+}
+
+@media screen and (min-width:320px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.5;
+    }
+}
+@media screen and (min-width:480px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.6;
+    }
+}
+@media screen and (min-width:600px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.7;
+    }
+}
+@media screen and (min-width:768px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.8;
+    }
+}
+@media screen and (min-width:900px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.8;
+    }
+}
+@media screen and (min-width:1024px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.8;
+    }
+}
+@media screen and (min-width:1200px){
+    .box{
+        transition: all 0.8s ease;
+        scale: 0.8;
+    }
+}
